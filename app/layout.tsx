@@ -48,6 +48,19 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={inter.variable}>
       <head>
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-J2WC7N8NHM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-J2WC7N8NHM');
+          `}
+        </Script>
         {/* Structured Data — Local Business */}
         <script
           type="application/ld+json"
